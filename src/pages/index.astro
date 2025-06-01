@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+
+const posts = await Astro.glob('../posts/*.md');
+posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
+const latest = posts.slice(0, 3);
+---
+<BaseLayout title="Nikhil Nagar — Product Blog">
+  <section class="mb-12 text-center">
+    <h1 class="text-4xl font-bold mb-2">Hi, I'm Nikhil 👋</h1>
+    <p class="text-lg text-gray-700 dark:text-gray-300">Product & design notes, experiments, and lessons from building AI-driven finance tools.</p>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Latest Posts</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {latest.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>
