@@ -1,0 +1,22 @@
+---
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+];
+---
+<header class="py-6">
+  <nav class="flex items-center justify-between">
+    <a href="/" class="font-semibold text-xl">Nikhil</a>
+    <ul class="flex gap-6">
+      {nav.map((item) => (
+        <li><a class="hover:text-accent" href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+    <button id="theme-switch" aria-label="Toggle dark mode" class="rounded-full p-2 hover:bg-gray-200 dark:hover:bg-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-7.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707" />
+      </svg>
+    </button>
+  </nav>
+</header>
