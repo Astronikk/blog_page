@@ -1,5 +1,5 @@
 {
-  "name": "nikhil-blog-portfolio",
+  "name": "blog_page",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
