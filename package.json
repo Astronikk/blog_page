@@ -1,5 +1,6 @@
 {
   "name": "blog_page",
+  "homepage": "https://astronikk.github.io/blog_page/",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
