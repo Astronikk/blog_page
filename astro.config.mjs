@@ -3,5 +3,5 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://nikhilnagar.com',
+  site: 'https://astronikk.github.io/blog_page/',
 });
